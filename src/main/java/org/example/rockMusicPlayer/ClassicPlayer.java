@@ -1,0 +1,45 @@
+package org.example.rockMusicPlayer;
+
+import org.example.rockMusicPlayer.classicTrack.ClassicTrack;
+import org.example.rockMusicPlayer.classicTrack.FirstClassicTrack;
+import org.example.rockMusicPlayer.classicTrack.SecondClassicTrack;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+
+@Component("classicPlayer")
+public class ClassicPlayer {
+
+    ArrayList<ClassicTrack> classicTrackList = new ArrayList<>();
+
+    @Autowired
+    private FirstClassicTrack firstClassicTrack;
+    private SecondClassicTrack secondClassicTrack;
+
+    public void addTrackToList(AnnotationConfigApplicationContext context) {
+        classicTrackList.add(firstClassicTrack);
+        classicTrackList.add(secondClassicTrack);
+    }
+
+    public void playTrack (int numberTrack)
+    {
+        System.out.println("Now track number" + numberTrack + "is playing" + "Track information:  " + classicTrackList.get(numberTrack));
+    }
+
+    public ArrayList<ClassicTrack> getClassicTrackList() {
+        return classicTrackList;
+    }
+
+    public void setClassicTrackList(ArrayList<ClassicTrack> classicTrackList) {
+        this.classicTrackList = classicTrackList;
+    }
+
+    @Override
+    public String toString() {
+        return "ClassicPlayer{" +
+                "classicTrackList=" + classicTrackList +
+                '}';
+    }
+}
