@@ -1,4 +1,4 @@
-package org.example.classicMusicPlayer.rockTrack;
+package org.example.rockMusicPlayer.rockTrack;
 
 import org.springframework.stereotype.Component;
 

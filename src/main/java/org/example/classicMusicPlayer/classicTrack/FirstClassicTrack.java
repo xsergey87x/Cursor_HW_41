@@ -1,12 +1,12 @@
-package org.example.classicMusicPlayer.rockTrack;
+package org.example.classicMusicPlayer.classicTrack;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class FirstRockTrack implements RockTrack {
+public class FirstClassicTrack implements ClassicTrack {
 
-    String nameTrack = "Nothing else matters";
-    String author = "Metallica";
+    String nameTrack = "Ноктюрн 2";
+    String author = "Шопен";
 
     public String getNameTrack() {
         return nameTrack;
@@ -26,7 +26,7 @@ public class FirstRockTrack implements RockTrack {
 
     @Override
     public String toString() {
-        return "FirstRockTrack{" +
+        return "FirstClassicTrack{" +
                 "nameTrack='" + nameTrack + '\'' +
                 ", author='" + author + '\'' +
                 '}';

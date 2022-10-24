@@ -1,8 +1,8 @@
-package org.example.rockMusicPlayer;
+package org.example.classicMusicPlayer;
 
-import org.example.rockMusicPlayer.classicTrack.ClassicTrack;
-import org.example.rockMusicPlayer.classicTrack.FirstClassicTrack;
-import org.example.rockMusicPlayer.classicTrack.SecondClassicTrack;
+import org.example.classicMusicPlayer.classicTrack.ClassicTrack;
+import org.example.classicMusicPlayer.classicTrack.FirstClassicTrack;
+import org.example.classicMusicPlayer.classicTrack.SecondClassicTrack;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import java.util.ArrayList;
