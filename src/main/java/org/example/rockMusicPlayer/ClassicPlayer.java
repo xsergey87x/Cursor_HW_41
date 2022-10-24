@@ -4,9 +4,7 @@ import org.example.rockMusicPlayer.classicTrack.ClassicTrack;
 import org.example.rockMusicPlayer.classicTrack.FirstClassicTrack;
 import org.example.rockMusicPlayer.classicTrack.SecondClassicTrack;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 
 @Component("classicPlayer")
@@ -15,16 +13,17 @@ public class ClassicPlayer {
     ArrayList<ClassicTrack> classicTrackList = new ArrayList<>();
 
     @Autowired
-    private FirstClassicTrack firstClassicTrack;
-    private SecondClassicTrack secondClassicTrack;
+    private FirstClassicTrack firstClassicTrack = new FirstClassicTrack();
 
-    public void addTrackToList(AnnotationConfigApplicationContext context) {
+    @Autowired
+    private SecondClassicTrack secondClassicTrack = new SecondClassicTrack();
+
+    public void addTrackToList() {
         classicTrackList.add(firstClassicTrack);
         classicTrackList.add(secondClassicTrack);
     }
 
-    public void playTrack (int numberTrack)
-    {
+    public void playTrack(int numberTrack) {
         System.out.println("Now track number" + numberTrack + "is playing" + "Track information:  " + classicTrackList.get(numberTrack));
     }
 

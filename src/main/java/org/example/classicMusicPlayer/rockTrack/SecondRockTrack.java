@@ -1,10 +1,9 @@
 package org.example.classicMusicPlayer.rockTrack;
 
-
 import org.springframework.stereotype.Component;
 
 @Component
-public class SecondRockTrack implements RockTrack{
+public class SecondRockTrack implements RockTrack {
 
     String nameTrack = "Wind of change";
     String author = "Scorpions";
